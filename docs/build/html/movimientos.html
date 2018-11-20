@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Métodos de movimiento &mdash; documentación de YarpTp Module - </title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Métodos de configuración" href="m_configuracion.html" />
+    <link rel="prev" title="Instalación" href="instalacion.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> YarpTp Module
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeros_pasos.html">Primeros pasos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacion.html">Instalación</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Métodos de movimiento</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#movimientos-abiertos">Movimientos abiertos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#movimientos-cerrados">Movimientos cerrados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#giros">Giros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metodos-de-parada">Métodos de parada</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="m_configuracion.html">Métodos de configuración</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">YarpTp Module</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Métodos de movimiento</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/movimientos.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="metodos-de-movimiento">
+<h1>Métodos de movimiento<a class="headerlink" href="#metodos-de-movimiento" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Los movimientos soportados por el módulo incluyen el desplazamiento hacia delante, hacia atrás y los giros.</p>
+<div class="section" id="movimientos-abiertos">
+<h2>Movimientos abiertos<a class="headerlink" href="#movimientos-abiertos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los métodos de movimiento que se presentan a continuación son ejecutados de forma libre y personalizada, como se muestra más adelante.</p>
+<p>Cada uno de los movimientos puede ejecutarse de dos formas: movimiento continuo o personalizado:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Cuando no se indica el parámetro del tiempo (tm) el movimiento será continuo hasta que una instrucción lo detenga y usando la velocidad indicada. Si la velocidad no se indica, se ejecuta el movimiento a la velocidad predefinida (50%).</li>
+<li>Cuando se indica un tiempo del movimiento, se ejecutará hasta que transcurra y luego se detendrá. Para la velocidad, se comportará de la forma indicada en el punto anterior.</li>
+</ul>
+</div></blockquote>
+<p>Los movimientos varían de acuerdo a la dirección (hacia delante o hacia atrás) y por el motor que se moverá (izquierdo, derecho o ambos motores). Los métodos se listan a continuación:</p>
+<dl class="class">
+<dt id="YarpTp.YarpTp">
+<em class="property">class </em><code class="descclassname">YarpTp.</code><code class="descname">YarpTp</code><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><dl class="method">
+<dt id="YarpTp.YarpTp.Forward">
+<code class="descname">Forward</code><span class="sig-paren">(</span><em>tm=0.0</em>, <em>speed=50</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.Forward"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.Forward" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Mover ambos motores hacia delante.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(en Python versión 3.7)"><em>float</em></a>) – Tiempo que durará el movimiento ejecutado.</li>
+<li><strong>speed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(en Python versión 3.7)"><em>int</em></a>) – Velocidad del movimiento.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="YarpTp.YarpTp.ForwardMotorL">
+<code class="descname">ForwardMotorL</code><span class="sig-paren">(</span><em>tm=0.0</em>, <em>speed=50</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.ForwardMotorL"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.ForwardMotorL" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Mover el motor izquierdo del robot hacia delante.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(en Python versión 3.7)"><em>float</em></a>) – (opcional) Tiempo que durará el movimiento ejecutado.</li>
+<li><strong>speed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(en Python versión 3.7)"><em>int</em></a>) – (opcional) Velocidad del movimiento.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="YarpTp.YarpTp.ForwardMotorR">
+<code class="descname">ForwardMotorR</code><span class="sig-paren">(</span><em>tm=0.0</em>, <em>speed=50</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.ForwardMotorR"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.ForwardMotorR" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Mover el motor derecho hacia delante.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(en Python versión 3.7)"><em>float</em></a>) – Tiempo que durará el movimiento ejecutado.</li>
+<li><strong>speed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(en Python versión 3.7)"><em>int</em></a>) – Velocidad del movimiento.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="YarpTp.YarpTp.Reverse">
+<code class="descname">Reverse</code><span class="sig-paren">(</span><em>tm=0.0</em>, <em>speed=50</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.Reverse"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.Reverse" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Mover ambos motores hacia atrás.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(en Python versión 3.7)"><em>float</em></a>) – Tiempo que durará el movimiento ejecutado.</li>
+<li><strong>speed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(en Python versión 3.7)"><em>int</em></a>) – Velocidad del movimiento.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="YarpTp.YarpTp.ReverseMotorL">
+<code class="descname">ReverseMotorL</code><span class="sig-paren">(</span><em>tm=0.0</em>, <em>speed=50</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.ReverseMotorL"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.ReverseMotorL" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Mover el motor izquierdo hacia atrás.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(en Python versión 3.7)"><em>float</em></a>) – Tiempo que durará el movimiento ejecutado.</li>
+<li><strong>speed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(en Python versión 3.7)"><em>int</em></a>) – Velocidad del movimiento.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="YarpTp.YarpTp.ReverseMotorR">
+<code class="descname">ReverseMotorR</code><span class="sig-paren">(</span><em>tm=0.0</em>, <em>speed=50</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.ReverseMotorR"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.ReverseMotorR" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Mover el motor derecho hacia atrás.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(en Python versión 3.7)"><em>float</em></a>) – Tiempo que durará el movimiento ejecutado.</li>
+<li><strong>speed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(en Python versión 3.7)"><em>int</em></a>) – Velocidad del movimiento.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="movimientos-cerrados">
+<h2>Movimientos cerrados<a class="headerlink" href="#movimientos-cerrados" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Estos movimientos ocurren de forma limitada o definida, es decir, mueven al robot por un paso.</p>
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="descclassname">YarpTp.</code><code class="descname">YarpTp</code><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp"><span class="viewcode-link">[fuente]</span></a></dt>
+<dd><dl class="method">
+<dt id="YarpTp.YarpTp.ForwardStep">
+<code class="descname">ForwardStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.ForwardStep"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.ForwardStep" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Mueve el robot 1 paso hacia delante.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="YarpTp.YarpTp.ReverseStep">
+<code class="descname">ReverseStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.ReverseStep"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.ReverseStep" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Mueve el robot 1 paso hacia atrás.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="giros">
+<h2>Giros<a class="headerlink" href="#giros" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Estos métodos permiten girar el robot hacia un lado.</p>
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="descclassname">YarpTp.</code><code class="descname">YarpTp</code><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp"><span class="viewcode-link">[fuente]</span></a></dt>
+<dd><dl class="method">
+<dt id="YarpTp.YarpTp.TurnLeft">
+<code class="descname">TurnLeft</code><span class="sig-paren">(</span><em>tm=0.3</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.TurnLeft"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.TurnLeft" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Gira el robot hacia la izquierda en un ángulo de 90°.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="YarpTp.YarpTp.TurnRight">
+<code class="descname">TurnRight</code><span class="sig-paren">(</span><em>tm=0.3</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.TurnRight"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.TurnRight" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Gira el robot hacia la derecha en un ángulo de 90°.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="metodos-de-parada">
+<h2>Métodos de parada<a class="headerlink" href="#metodos-de-parada" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los siguiente métodos detienen el movimiento de los motores del robot.</p>
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="descclassname">YarpTp.</code><code class="descname">YarpTp</code><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp"><span class="viewcode-link">[fuente]</span></a></dt>
+<dd><dl class="method">
+<dt id="YarpTp.YarpTp.Stop">
+<code class="descname">Stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.Stop"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.Stop" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Detiene ambos motores.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="YarpTp.YarpTp.StopMotorL">
+<code class="descname">StopMotorL</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.StopMotorL"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.StopMotorL" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Detiene el motor izquierdo.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="YarpTp.YarpTp.StopMotorR">
+<code class="descname">StopMotorR</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.StopMotorR"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.StopMotorR" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Detiene el motor izquierdo.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="m_configuracion.html" class="btn btn-neutral float-right" title="Métodos de configuración" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="instalacion.html" class="btn btn-neutral" title="Instalación" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Kevin Pedroza Goenaga
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

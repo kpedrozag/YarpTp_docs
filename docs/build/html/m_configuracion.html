@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Métodos de configuración &mdash; documentación de YarpTp Module - </title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Métodos de movimiento" href="movimientos.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> YarpTp Module
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeros_pasos.html">Primeros pasos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacion.html">Instalación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movimientos.html">Métodos de movimiento</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Métodos de configuración</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#desactivar-control">Desactivar control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definicion-de-los-pines-a-usar">Definición de los pines a usar</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">YarpTp Module</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Métodos de configuración</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/m_configuracion.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="metodos-de-configuracion">
+<h1>Métodos de configuración<a class="headerlink" href="#metodos-de-configuracion" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="desactivar-control">
+<h2>Desactivar control<a class="headerlink" href="#desactivar-control" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Cuando se finalice el uso del robot, deben liberarse los pines de la Raspberry. Para esto, es importante que al final de cada script donde se controle el robot se ejecute el siguiente movimiento.</p>
+<dl class="class">
+<dt id="YarpTp.YarpTp">
+<em class="property">class </em><code class="descclassname">YarpTp.</code><code class="descname">YarpTp</code><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><dl class="method">
+<dt id="YarpTp.YarpTp.GoodBye">
+<code class="descname">GoodBye</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.GoodBye"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.GoodBye" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Desactiva el control de los pines del robot.</p>
+</dd></dl>
+
+</dd></dl>
+
+<p>Al ejecutar el método anterior, no se podrá controlar más el robot.
+Sin embargo, si una nueva instancia de la clase YarpTp se crea usando la instruccion <code class="docutils literal notranslate"><span class="pre">YarpTp()</span></code>
+se podrá controlar de nuevo el robot.</p>
+</div>
+<div class="section" id="definicion-de-los-pines-a-usar">
+<h2>Definición de los pines a usar<a class="headerlink" href="#definicion-de-los-pines-a-usar" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Internamente, el control de las ruedas se da desde los pines GPIO de la Raspberry, los cuales están predefinidos en el módulo siguiendo la documentación de construcción del robot YarpTp. Sin embargo, si los pines son cambiados, se pueden usar los siguientes métodos:</p>
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="descclassname">YarpTp.</code><code class="descname">YarpTp</code><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp"><span class="viewcode-link">[fuente]</span></a></dt>
+<dd><dl class="method">
+<dt id="YarpTp.YarpTp.setMotorLeft">
+<code class="descname">setMotorLeft</code><span class="sig-paren">(</span><em>enA</em>, <em>in1</em>, <em>in2</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.setMotorLeft"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.setMotorLeft" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Personalizar los pines GPIO usados por el motor izquierdo.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>enA</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(en Python versión 3.7)"><em>int</em></a>) – Código BCM del pin conectado a la entrada enA del controlador L298N.</li>
+<li><strong>in1</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(en Python versión 3.7)"><em>int</em></a>) – Código BCM del pin conectado a la entrada in1 del controlador L298N.</li>
+<li><strong>in2</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(en Python versión 3.7)"><em>int</em></a>) – Código BCM del pin conectado a la entrada in2 del controlador L298N.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="YarpTp.YarpTp.setMotorRight">
+<code class="descname">setMotorRight</code><span class="sig-paren">(</span><em>enB</em>, <em>in3</em>, <em>in4</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/YarpTp/yarptp.html#YarpTp.setMotorRight"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#YarpTp.YarpTp.setMotorRight" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Personalizar los pines GPIO usados por el motor derecho.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>enB</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(en Python versión 3.7)"><em>int</em></a>) – Código BCM del pin conectado a la entrada enB del controlador L298N.</li>
+<li><strong>in3</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(en Python versión 3.7)"><em>int</em></a>) – Código BCM del pin conectado a la entrada in3 del controlador L298N.</li>
+<li><strong>in4</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(en Python versión 3.7)"><em>int</em></a>) – Código BCM del pin conectado a la entrada in4 del controlador L298N.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="movimientos.html" class="btn btn-neutral" title="Métodos de movimiento" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Kevin Pedroza Goenaga
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
